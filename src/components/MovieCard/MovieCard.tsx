@@ -6,6 +6,7 @@ interface MovieCardProps {
   movie: MovieItem;
   onClick: (movie: MovieItem) => void;
 }
+const isProd = import.meta.env.VITE_IS_PROD === "true";
 
 const MovieCard: FC<MovieCardProps> = ({ movie, onClick }) => {
   return (
@@ -22,7 +23,7 @@ const MovieCard: FC<MovieCardProps> = ({ movie, onClick }) => {
       }}
     >
       <img
-        src={`/src/assets/images/${movie.CoverImage}`}
+        src={`${isProd ? "" : "/src"}/assets/images/${movie.CoverImage}`}
         alt={movie.Title}
         className={styles.cover}
       />
