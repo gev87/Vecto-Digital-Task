@@ -50,12 +50,8 @@ const FeaturedVideo: FC<FeaturedVideoProps> = ({ selectedMovie }) => {
       <div className={styles.coverWrapper}>
         {playVideo && selectedMovie ? (
           <ReactPlayer
-            src={selectedMovie.VideoUrl} 
-            config={{
-              youtube: {
-                color: "white",
-              },
-            }}
+            src={selectedMovie.VideoUrl}
+            controls
             playing
             width="100%"
             height="100%"
