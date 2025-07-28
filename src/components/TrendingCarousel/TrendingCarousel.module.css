@@ -1,0 +1,38 @@
+.carouselWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 5;
+  padding-left: 160px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 991px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .carouselWrapper {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+
+   .heading {
+    font-size: 20px;
+  }
+  .carouselWrapper {
+    padding-left: 10px;
+  }
+}
+
+
